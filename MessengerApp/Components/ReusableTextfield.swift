@@ -33,7 +33,7 @@ class ReusableTextfield: UITextField {
   
   private func configure() {
     translatesAutoresizingMaskIntoConstraints = false
-    backgroundColor = .secondarySystemBackground
+    backgroundColor = .systemGray6
     layer.cornerRadius = 8
     textColor = .label
     tintColor = .label

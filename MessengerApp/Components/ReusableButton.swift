@@ -17,7 +17,7 @@ class ReusableButton: UIButton {
     fatalError("init(coder:) has not been implemented")
   }
   
-  init(buttonTitle: String, textColor: UIColor, buttonColor: UIColor, height: CGFloat?, width: CGFloat?) {
+  init(buttonTitle: String?, textColor: UIColor?, buttonColor: UIColor, height: CGFloat?, width: CGFloat?) {
     super.init(frame: .zero)
     self.setTitle(buttonTitle, for: .normal)
     self.setTitleColor(textColor, for: .normal)

@@ -11,18 +11,18 @@ class LoginVC: UIViewController {
 
   // MARK: Properties
   private let headerStackView = ReusableStackview(distrubiton: .fill, axis: .vertical, spacing: 10, alignment: .center)
-  private let logoImageView = ReusableSystemImage(systemImage: "bubble.right", preferMultiColor: false, color: .systemYellow, height: 125, width: 125)
+  private let logoImageView = ReusableSystemImage(systemImage: "bubble.right", preferMultiColor: false, color: .systemPurple, height: 125, width: 125)
   private let taskLabel = ReusableLabel(text: "Sign In", fontSize: 18, weight: .bold, color: .label, numberOfLines: 0)
   private let instructionsLabel = ReusableLabel(text: "Enter Your Information below", fontSize: 14, weight: .light, color: .label, numberOfLines: 0)
   
   private let textfieldStackView = ReusableStackview(distrubiton: .fill, axis: .vertical, spacing: 20, alignment: .center)
-  private let emailTextfield = ReusableTextfield(placeholder: "E-Mail Address", keyboardType: .asciiCapable, isSecure: false, height: 50, width: UIScreen.main.bounds.width / 1.2)
+  private let emailTextfield = ReusableTextfield(placeholder: "E-mail Address", keyboardType: .asciiCapable, isSecure: false, height: 50, width: UIScreen.main.bounds.width / 1.2)
   private let passwordTextfield = ReusableTextfield(placeholder: "Password", keyboardType: .asciiCapable, isSecure: true, height: 50, width: UIScreen.main.bounds.width / 1.2)
-  private let signInButton = ReusableButton(buttonTitle: "Sign In", textColor: .black, buttonColor: .systemYellow, height: 50, width: UIScreen.main.bounds.width / 1.2)
+  private let signInButton = ReusableButton(buttonTitle: "Sign In", textColor: .black, buttonColor: .systemPurple, height: 50, width: UIScreen.main.bounds.width / 1.2)
   
   private let newUserStackView = ReusableStackview(distrubiton: .fill, axis: .horizontal, spacing: 5, alignment: .center)
   private let newUserLabel = ReusableLabel(text: "New User?", fontSize: 16, weight: .semibold, color: .label, numberOfLines: 0)
-  private let createAccountButton = ReusableButton(buttonTitle: "Create Account", textColor: .systemYellow, buttonColor: .clear, height: nil, width: 125)
+  private let createAccountButton = ReusableButton(buttonTitle: "Create Account", textColor: .lightGray, buttonColor: .clear, height: nil, width: 125)
   
   // MARK: Lifecyle
   override func viewDidLoad() {
@@ -34,11 +34,20 @@ class LoginVC: UIViewController {
   
   // MARK: Objc Functions
   @objc func signInTapped() {
-    print("Sign In")
+    guard let email = emailTextfield.text else { return }
+    guard let password = passwordTextfield.text else { return }
+
+    if email.isEmpty && password.isEmpty {
+      presentAlert(title: "🟣 Error 🟣", message: "We had trouble signing you in", buttonTitle: "Try Again")
+      return
+    }
+    
+    print("Signed In")
   }
   
   @objc func createAccountTapped() {
-    print("Take to create account view")
+    let vc = RegisterVC()
+    navigationController?.pushViewController(vc, animated: true)
   }
   
   // MARK: Helping Functions

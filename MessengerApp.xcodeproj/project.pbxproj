@@ -22,6 +22,7 @@
 		1D9043B72B3CB55100C25E3F /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043AE2B3CB55000C25E3F /* ReusableView.swift */; };
 		1D9043B82B3CB55100C25E3F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043B02B3CB55100C25E3F /* UIViewController+Ext.swift */; };
 		1D9043BC2B3CBBB700C25E3F /* ReusableStackview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043BB2B3CBBB700C25E3F /* ReusableStackview.swift */; };
+		1D9043BE2B3CCA6200C25E3F /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043BD2B3CCA6200C25E3F /* RegisterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		1D9043AE2B3CB55000C25E3F /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		1D9043B02B3CB55100C25E3F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		1D9043BB2B3CBBB700C25E3F /* ReusableStackview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableStackview.swift; sourceTree = "<group>"; };
+		1D9043BD2B3CCA6200C25E3F /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				1D9043A52B3CB53800C25E3F /* LoginVC.swift */,
+				1D9043BD2B3CCA6200C25E3F /* RegisterVC.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				1D9043912B3CB4A100C25E3F /* SceneDelegate.swift in Sources */,
 				1D9043B42B3CB55100C25E3F /* ReusableTextfield.swift in Sources */,
 				1D9043B12B3CB55100C25E3F /* ReusableAlert.swift in Sources */,
+				1D9043BE2B3CCA6200C25E3F /* RegisterVC.swift in Sources */,
 				1D9043B62B3CB55100C25E3F /* ReusableSystemImage.swift in Sources */,
 				1D9043BC2B3CBBB700C25E3F /* ReusableStackview.swift in Sources */,
 			);

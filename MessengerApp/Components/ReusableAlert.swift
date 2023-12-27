@@ -8,10 +8,10 @@ import UIKit
 
 class ReusableAlert: UIViewController {
   
-  let containerView = ReusableView()
+  let containerView = ReusableView(borderWidth: 1, cornerRadius: 8)
   let alertTitleLabel = ReusableLabel(text: "Error", fontSize: 18, weight: .bold, color: .label, numberOfLines: 1)
   let alertMessageLabel = ReusableBodyLabel(title: "Alert Message", textColor: .secondaryLabel)
-  let actionButton = ReusableButton(buttonTitle: "Ok", textColor: .systemGray5, buttonColor: .white, height: 44, width: 100)
+  let actionButton = ReusableButton(buttonTitle: "Ok", textColor: .black, buttonColor: .systemPurple, height: 44, width: 250)
   
   var alertTitle: String?
   var alertMessage: String?
@@ -35,9 +35,6 @@ class ReusableAlert: UIViewController {
     view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
     configureAlertProperties()
     configureAlertConstraints()
-    
-    // Button Target
-    actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
   }
   
   @objc func dismissVC() {
@@ -55,6 +52,7 @@ class ReusableAlert: UIViewController {
     alertMessageLabel.numberOfLines = 4
     
     containerView.addSubview(actionButton)
+    actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
     actionButton.setTitle(buttonTitle ?? "Okay", for: .normal)
   }
   
@@ -76,9 +74,7 @@ class ReusableAlert: UIViewController {
     // Button constraint
     NSLayoutConstraint.activate([
       actionButton.bottomAnchor.constraint(equalTo: containerView.bottomAnchor, constant: -padding),
-      actionButton.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
-      actionButton.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
-      actionButton.heightAnchor.constraint(equalToConstant: 44)
+      actionButton.centerXAnchor.constraint(equalTo: containerView.centerXAnchor)
     ])
 
     // Alert message constraint
