@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import CoreLocation
+import JGProgressHUD
 
 extension UIViewController {
   func presentAlert(title: String, message: String, buttonTitle: String) {
@@ -17,4 +17,21 @@ extension UIViewController {
       self.present(alert, animated: true)
     }
   }
+}
+
+extension UIViewController {
+  
+  func showLoader(show: Bool, withText text: String?) {
+    view.endEditing(true)
+    let hud = JGProgressHUD(style: .dark)
+    hud.textLabel.text = text ?? "Loading"
+    hud.show(in: view)
+    
+    if show {
+      hud.show(in: view)
+    } else {
+      hud.dismiss()
+    }
+  }
+  
 }

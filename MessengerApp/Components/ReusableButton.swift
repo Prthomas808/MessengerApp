@@ -35,6 +35,8 @@ class ReusableButton: UIButton {
   private func configure() {
     translatesAutoresizingMaskIntoConstraints = false
     layer.cornerRadius = 8
+    isUserInteractionEnabled = true
+    clipsToBounds = true
   }
 
 }

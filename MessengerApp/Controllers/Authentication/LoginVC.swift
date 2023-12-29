@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LoginVC: UIViewController {
 
@@ -42,7 +43,9 @@ class LoginVC: UIViewController {
       return
     }
     
-    print("Signed In")
+    showLoader(show: true, withText: "Logging In")
+    AuthenticationManagers.shared.signIn(email: email, password: password, vc: self)
+    showLoader(show: false, withText: "Logging In")
   }
   
   @objc func createAccountTapped() {

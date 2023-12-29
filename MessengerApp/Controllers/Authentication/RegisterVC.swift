@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
 class RegisterVC: UIViewController {
 
   // MARK: Properties
-  private let ProfileImageButton = ReusableSystemImage(systemImage: "person.circle", preferMultiColor: false, color: .systemPurple, height: 140, width: 140)
+  private let ProfileImageButton = ReusableButton(buttonTitle: "Add Photo", textColor: .label, buttonColor: .systemGray6, height: 140, width: 140)
+  private var profilePic: UIImage?
   
   private let textfieldStackview = ReusableStackview(distrubiton: .fill, axis: .vertical, spacing: 20, alignment: .center)
   private let firstNameTextfild = ReusableTextfield(placeholder: "First Name", keyboardType: .asciiCapable, isSecure: false, height: 50, width: UIScreen.main.bounds.width / 1.2)
@@ -33,18 +36,29 @@ class RegisterVC: UIViewController {
   }
   
   // MARK: Objc Functions
+  @objc func addProfilePicTapped() {
+    let imagePicker = UIImagePickerController()
+    imagePicker.delegate = self
+    present(imagePicker, animated: true)
+  }
+  
   @objc func signUpTapped() {
+    guard let profilePic = profilePic?.jpegData(compressionQuality: 0.3) else { return }
     guard let firstName = firstNameTextfild.text else { return }
     guard let lastName = lastNameTextfild.text else { return }
     guard let email = emailTextfild.text else { return }
     guard let password = passwordTextfild.text else { return }
     
-    if firstName.isEmpty, lastName.isEmpty, email.isEmpty, password.isEmpty {
+    if firstName.isEmpty || lastName.isEmpty || email.isEmpty || password.isEmpty {
       presentAlert(title: "🟣 Error 🟣", message: "We couldn't sign you up", buttonTitle: "Try Again")
       return
     }
     
-    print("User has been signed up")
+    showLoader(show: true, withText: "Signing You Up")
+    
+    AuthenticationManagers.shared.createUser(firstName: firstName, lastName: lastName, email: email, password: password, profilePic: profilePic, view: self)
+    
+    showLoader(show: false, withText: "Signing You Up")
   }
   
   @objc func logInTapped() {
@@ -54,7 +68,10 @@ class RegisterVC: UIViewController {
   // MARK: Helping Functions
   private func configureProperties() {
     view.addSubview(ProfileImageButton)
-  
+    let tap = UITapGestureRecognizer(target: self, action: #selector(addProfilePicTapped))
+    ProfileImageButton.addGestureRecognizer(tap)
+    ProfileImageButton.imageView?.contentMode = .scaleAspectFill
+    
     view.addSubview(textfieldStackview)
     textfieldStackview.addArrangedSubview(firstNameTextfild)
     textfieldStackview.addArrangedSubview(lastNameTextfild)
@@ -80,7 +97,7 @@ class RegisterVC: UIViewController {
     
     //textfieldStackview
     NSLayoutConstraint.activate([
-      textfieldStackview.topAnchor.constraint(equalTo: ProfileImageButton.bottomAnchor, constant: 10),
+      textfieldStackview.topAnchor.constraint(equalTo: ProfileImageButton.bottomAnchor, constant: 15),
       textfieldStackview.centerXAnchor.constraint(equalTo: view.centerXAnchor)
     ])
     
@@ -89,5 +106,17 @@ class RegisterVC: UIViewController {
       currentUserStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -5),
       currentUserStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
     ])
+  }
+}
+
+extension RegisterVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    let image = info[.originalImage] as? UIImage
+    profilePic = image
+    ProfileImageButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+    ProfileImageButton.layer.borderColor = UIColor.systemPurple.cgColor
+    ProfileImageButton.layer.borderWidth = 3
+    ProfileImageButton.layer.cornerRadius = 10
+    dismiss(animated: true)
   }
 }
