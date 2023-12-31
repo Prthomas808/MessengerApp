@@ -12,14 +12,14 @@ class LoginVC: UIViewController {
 
   // MARK: Properties
   private let headerStackView = ReusableStackview(distrubiton: .fill, axis: .vertical, spacing: 10, alignment: .center)
-  private let logoImageView = ReusableSystemImage(systemImage: "bubble.right", preferMultiColor: false, color: .systemPurple, height: 125, width: 125)
+  private let logoImageView = ReusableSystemImage(systemImage: "bubble.right", preferMultiColor: false, color: .systemGreen, height: 125, width: 125)
   private let taskLabel = ReusableLabel(text: "Sign In", fontSize: 18, weight: .bold, color: .label, numberOfLines: 0)
   private let instructionsLabel = ReusableLabel(text: "Enter Your Information below", fontSize: 14, weight: .light, color: .label, numberOfLines: 0)
   
   private let textfieldStackView = ReusableStackview(distrubiton: .fill, axis: .vertical, spacing: 20, alignment: .center)
   private let emailTextfield = ReusableTextfield(placeholder: "E-mail Address", keyboardType: .asciiCapable, isSecure: false, height: 50, width: UIScreen.main.bounds.width / 1.2)
   private let passwordTextfield = ReusableTextfield(placeholder: "Password", keyboardType: .asciiCapable, isSecure: true, height: 50, width: UIScreen.main.bounds.width / 1.2)
-  private let signInButton = ReusableButton(buttonTitle: "Sign In", textColor: .black, buttonColor: .systemPurple, height: 50, width: UIScreen.main.bounds.width / 1.2)
+  private let signInButton = ReusableButton(buttonTitle: "Sign In", textColor: .black, buttonColor: .systemGreen, height: 50, width: UIScreen.main.bounds.width / 1.2)
   
   private let newUserStackView = ReusableStackview(distrubiton: .fill, axis: .horizontal, spacing: 5, alignment: .center)
   private let newUserLabel = ReusableLabel(text: "New User?", fontSize: 16, weight: .semibold, color: .label, numberOfLines: 0)
@@ -43,9 +43,7 @@ class LoginVC: UIViewController {
       return
     }
     
-    showLoader(show: true, withText: "Logging In")
     AuthenticationManagers.shared.signIn(email: email, password: password, vc: self)
-    showLoader(show: false, withText: "Logging In")
   }
   
   @objc func createAccountTapped() {

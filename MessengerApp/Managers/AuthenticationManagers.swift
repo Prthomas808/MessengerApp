@@ -19,10 +19,10 @@ class AuthenticationManagers {
     
     Auth.auth().signIn(withEmail: email, password: password) { result, error in
       if let error = error {
-        print(" 🚨 ERROR: Failed to log user in \(error.localizedDescription)")
+        print(" 🚨 ERROR: Could not sign user in \(error.localizedDescription)")
         return
       }
-  
+
       vc.dismiss(animated: true)
     }
   }
@@ -97,8 +97,6 @@ class AuthenticationManagers {
       view.present(nav, animated: true)
     }
   }
-  
-  // MARK: Authenticatin Progress View
 }
 
 

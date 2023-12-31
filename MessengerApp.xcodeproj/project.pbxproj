@@ -17,7 +17,6 @@
 		1D9043B22B3CB55100C25E3F /* ReusableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043A92B3CB55000C25E3F /* ReusableButton.swift */; };
 		1D9043B32B3CB55100C25E3F /* ReusableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043AA2B3CB55000C25E3F /* ReusableLabel.swift */; };
 		1D9043B42B3CB55100C25E3F /* ReusableTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043AB2B3CB55000C25E3F /* ReusableTextfield.swift */; };
-		1D9043B52B3CB55100C25E3F /* ReusableBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043AC2B3CB55000C25E3F /* ReusableBodyLabel.swift */; };
 		1D9043B62B3CB55100C25E3F /* ReusableSystemImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043AD2B3CB55000C25E3F /* ReusableSystemImage.swift */; };
 		1D9043B72B3CB55100C25E3F /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043AE2B3CB55000C25E3F /* ReusableView.swift */; };
 		1D9043B82B3CB55100C25E3F /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043B02B3CB55100C25E3F /* UIViewController+Ext.swift */; };
@@ -30,6 +29,12 @@
 		1D9043CC2B3E4F1F00C25E3F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 1D9043CB2B3E4F1F00C25E3F /* FirebaseStorage */; };
 		1D9043CF2B3E79A100C25E3F /* AuthenticationManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043CE2B3E79A100C25E3F /* AuthenticationManagers.swift */; };
 		1D9043D22B3E851000C25E3F /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 1D9043D12B3E851000C25E3F /* JGProgressHUD */; };
+		1D9043D72B3F6D5F00C25E3F /* NewMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043D62B3F6D5F00C25E3F /* NewMessageVC.swift */; };
+		1D9043DB2B3F713500C25E3F /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043DA2B3F713500C25E3F /* ContactCell.swift */; };
+		1D9043DE2B3F779600C25E3F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043DD2B3F779600C25E3F /* User.swift */; };
+		1D9043E02B3F783800C25E3F /* FetchUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D9043DF2B3F783800C25E3F /* FetchUserManager.swift */; };
+		1D9043E32B3FC23100C25E3F /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1D9043E22B3FC23100C25E3F /* SDWebImage */; };
+		1D9043E52B3FC23100C25E3F /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1D9043E42B3FC23100C25E3F /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +50,6 @@
 		1D9043A92B3CB55000C25E3F /* ReusableButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableButton.swift; sourceTree = "<group>"; };
 		1D9043AA2B3CB55000C25E3F /* ReusableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableLabel.swift; sourceTree = "<group>"; };
 		1D9043AB2B3CB55000C25E3F /* ReusableTextfield.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableTextfield.swift; sourceTree = "<group>"; };
-		1D9043AC2B3CB55000C25E3F /* ReusableBodyLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableBodyLabel.swift; sourceTree = "<group>"; };
 		1D9043AD2B3CB55000C25E3F /* ReusableSystemImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableSystemImage.swift; sourceTree = "<group>"; };
 		1D9043AE2B3CB55000C25E3F /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		1D9043B02B3CB55100C25E3F /* UIViewController+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
@@ -53,6 +57,10 @@
 		1D9043BD2B3CCA6200C25E3F /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		1D9043C22B3E4E6900C25E3F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1D9043CE2B3E79A100C25E3F /* AuthenticationManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManagers.swift; sourceTree = "<group>"; };
+		1D9043D62B3F6D5F00C25E3F /* NewMessageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageVC.swift; sourceTree = "<group>"; };
+		1D9043DA2B3F713500C25E3F /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		1D9043DD2B3F779600C25E3F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1D9043DF2B3F783800C25E3F /* FetchUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchUserManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +68,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D9043E32B3FC23100C25E3F /* SDWebImage in Frameworks */,
 				1D9043C62B3E4F1F00C25E3F /* FirebaseAuth in Frameworks */,
 				1D9043CC2B3E4F1F00C25E3F /* FirebaseStorage in Frameworks */,
 				1D9043C82B3E4F1F00C25E3F /* FirebaseFirestore in Frameworks */,
 				1D9043CA2B3E4F1F00C25E3F /* FirebaseFirestoreSwift in Frameworks */,
+				1D9043E52B3FC23100C25E3F /* SDWebImageMapKit in Frameworks */,
 				1D9043D22B3E851000C25E3F /* JGProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,6 +103,8 @@
 				1D9043CD2B3E798D00C25E3F /* Managers */,
 				1D9043A72B3CB55000C25E3F /* Components */,
 				1D9043AF2B3CB55100C25E3F /* Extensions */,
+				1D9043DC2B3F778100C25E3F /* Models */,
+				1D9043D82B3F711400C25E3F /* Views */,
 				1D9043A32B3CB51000C25E3F /* Controllers */,
 				1D9043A22B3CB50100C25E3F /* Supporting */,
 				1D90439C2B3CB4AA00C25E3F /* Info.plist */,
@@ -115,8 +127,8 @@
 		1D9043A32B3CB51000C25E3F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1D9043D32B3F6D2400C25E3F /* Core */,
 				1D9043A42B3CB51E00C25E3F /* Authentication */,
-				1D9043922B3CB4A100C25E3F /* HomeVC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -137,7 +149,6 @@
 				1D9043A92B3CB55000C25E3F /* ReusableButton.swift */,
 				1D9043AA2B3CB55000C25E3F /* ReusableLabel.swift */,
 				1D9043AB2B3CB55000C25E3F /* ReusableTextfield.swift */,
-				1D9043AC2B3CB55000C25E3F /* ReusableBodyLabel.swift */,
 				1D9043AD2B3CB55000C25E3F /* ReusableSystemImage.swift */,
 				1D9043AE2B3CB55000C25E3F /* ReusableView.swift */,
 				1D9043BB2B3CBBB700C25E3F /* ReusableStackview.swift */,
@@ -157,8 +168,42 @@
 			isa = PBXGroup;
 			children = (
 				1D9043CE2B3E79A100C25E3F /* AuthenticationManagers.swift */,
+				1D9043DF2B3F783800C25E3F /* FetchUserManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		1D9043D32B3F6D2400C25E3F /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				1D9043922B3CB4A100C25E3F /* HomeVC.swift */,
+				1D9043D62B3F6D5F00C25E3F /* NewMessageVC.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		1D9043D82B3F711400C25E3F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1D9043D92B3F711D00C25E3F /* Cells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1D9043D92B3F711D00C25E3F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				1D9043DA2B3F713500C25E3F /* ContactCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		1D9043DC2B3F778100C25E3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1D9043DD2B3F779600C25E3F /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +228,8 @@
 				1D9043C92B3E4F1F00C25E3F /* FirebaseFirestoreSwift */,
 				1D9043CB2B3E4F1F00C25E3F /* FirebaseStorage */,
 				1D9043D12B3E851000C25E3F /* JGProgressHUD */,
+				1D9043E22B3FC23100C25E3F /* SDWebImage */,
+				1D9043E42B3FC23100C25E3F /* SDWebImageMapKit */,
 			);
 			productName = MessengerApp;
 			productReference = 1D90438B2B3CB4A100C25E3F /* MessengerApp.app */;
@@ -215,6 +262,7 @@
 			packageReferences = (
 				1D9043C42B3E4F1F00C25E3F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				1D9043D02B3E851000C25E3F /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				1D9043E12B3FC23000C25E3F /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 1D90438C2B3CB4A100C25E3F /* Products */;
 			projectDirPath = "";
@@ -244,17 +292,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D9043932B3CB4A100C25E3F /* HomeVC.swift in Sources */,
+				1D9043DB2B3F713500C25E3F /* ContactCell.swift in Sources */,
 				1D9043B32B3CB55100C25E3F /* ReusableLabel.swift in Sources */,
+				1D9043E02B3F783800C25E3F /* FetchUserManager.swift in Sources */,
 				1D9043B82B3CB55100C25E3F /* UIViewController+Ext.swift in Sources */,
 				1D90438F2B3CB4A100C25E3F /* AppDelegate.swift in Sources */,
 				1D9043B22B3CB55100C25E3F /* ReusableButton.swift in Sources */,
+				1D9043D72B3F6D5F00C25E3F /* NewMessageVC.swift in Sources */,
 				1D9043B72B3CB55100C25E3F /* ReusableView.swift in Sources */,
 				1D9043A62B3CB53800C25E3F /* LoginVC.swift in Sources */,
-				1D9043B52B3CB55100C25E3F /* ReusableBodyLabel.swift in Sources */,
 				1D9043912B3CB4A100C25E3F /* SceneDelegate.swift in Sources */,
 				1D9043B42B3CB55100C25E3F /* ReusableTextfield.swift in Sources */,
 				1D9043B12B3CB55100C25E3F /* ReusableAlert.swift in Sources */,
 				1D9043CF2B3E79A100C25E3F /* AuthenticationManagers.swift in Sources */,
+				1D9043DE2B3F779600C25E3F /* User.swift in Sources */,
 				1D9043BE2B3CCA6200C25E3F /* RegisterVC.swift in Sources */,
 				1D9043B62B3CB55100C25E3F /* ReusableSystemImage.swift in Sources */,
 				1D9043BC2B3CBBB700C25E3F /* ReusableStackview.swift in Sources */,
@@ -481,6 +532,14 @@
 				kind = branch;
 			};
 		};
+		1D9043E12B3FC23000C25E3F /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -508,6 +567,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1D9043D02B3E851000C25E3F /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
 			productName = JGProgressHUD;
+		};
+		1D9043E22B3FC23100C25E3F /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D9043E12B3FC23000C25E3F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		1D9043E42B3FC23100C25E3F /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1D9043E12B3FC23000C25E3F /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -27,7 +27,7 @@ class ReusableView: UIView {
   private func configure() {
     translatesAutoresizingMaskIntoConstraints = false
     backgroundColor = .systemBackground
-    layer.borderColor = UIColor.systemPurple.cgColor
+    layer.borderColor = UIColor.systemGreen.cgColor
   }
   
 }

@@ -27,12 +27,18 @@ class HomeVC: UIViewController {
     AuthenticationManagers.shared.presentLogIn(view: self)
   }
   
+  @objc func newMessageTapped() {
+    let vc = NewMessageVC()
+    let nav = UINavigationController(rootViewController: vc)
+    present(nav, animated: true)
+  }
+  
   // MARK: Helping Functions
   private func configureNavBar() {
     title = "Conversations"
     navigationController?.navigationBar.prefersLargeTitles = true
-    navigationController?.navigationBar.tintColor = .systemPurple
     navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "person.circle"), style: .plain, target: self, action: #selector(profileTapped))
+    navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "square.and.pencil"), style: .plain, target: self, action: #selector(newMessageTapped))
   }
 
   private func authenticateUser() {

@@ -10,8 +10,8 @@ class ReusableAlert: UIViewController {
   
   let containerView = ReusableView(borderWidth: 1, cornerRadius: 8)
   let alertTitleLabel = ReusableLabel(text: "Error", fontSize: 18, weight: .bold, color: .label, numberOfLines: 1)
-  let alertMessageLabel = ReusableBodyLabel(title: "Alert Message", textColor: .secondaryLabel)
-  let actionButton = ReusableButton(buttonTitle: "Ok", textColor: .black, buttonColor: .systemPurple, height: 44, width: 250)
+  let alertMessageLabel = ReusableLabel(text: "Alert Message", fontSize: 13, weight: .regular, color: .secondaryLabel, numberOfLines: 4)
+  let actionButton = ReusableButton(buttonTitle: "Ok", textColor: .black, buttonColor: .systemGreen, height: 44, width: 250)
   
   var alertTitle: String?
   var alertMessage: String?

@@ -20,7 +20,7 @@ class RegisterVC: UIViewController {
   private let lastNameTextfild = ReusableTextfield(placeholder: "Last Name", keyboardType: .asciiCapable, isSecure: false, height: 50, width: UIScreen.main.bounds.width / 1.2)
   private let emailTextfild = ReusableTextfield(placeholder: "E-mail Address", keyboardType: .emailAddress, isSecure: false, height: 50, width: UIScreen.main.bounds.width / 1.2)
   private let passwordTextfild = ReusableTextfield(placeholder: "Password", keyboardType: .asciiCapable, isSecure: true, height: 50, width: UIScreen.main.bounds.width / 1.2)
-  private let signUpButton = ReusableButton(buttonTitle: "Sign Up", textColor: .black, buttonColor: .systemPurple, height: 50, width: UIScreen.main.bounds.width / 1.2)
+  private let signUpButton = ReusableButton(buttonTitle: "Sign Up", textColor: .black, buttonColor: .systemGreen, height: 50, width: UIScreen.main.bounds.width / 1.2)
   
   private let currentUserStackView = ReusableStackview(distrubiton: .fill, axis: .horizontal, spacing: 0, alignment: .center)
   private let currentUserLabel = ReusableLabel(text: "Have An Account?", fontSize: 16, weight: .semibold, color: .label, numberOfLines: 0)
@@ -54,11 +54,9 @@ class RegisterVC: UIViewController {
       return
     }
     
-    showLoader(show: true, withText: "Signing You Up")
-    
+   
     AuthenticationManagers.shared.createUser(firstName: firstName, lastName: lastName, email: email, password: password, profilePic: profilePic, view: self)
     
-    showLoader(show: false, withText: "Signing You Up")
   }
   
   @objc func logInTapped() {
@@ -71,6 +69,7 @@ class RegisterVC: UIViewController {
     let tap = UITapGestureRecognizer(target: self, action: #selector(addProfilePicTapped))
     ProfileImageButton.addGestureRecognizer(tap)
     ProfileImageButton.imageView?.contentMode = .scaleAspectFill
+    ProfileImageButton.layer.cornerRadius = 140 / 2
     
     view.addSubview(textfieldStackview)
     textfieldStackview.addArrangedSubview(firstNameTextfild)
@@ -114,9 +113,9 @@ extension RegisterVC: UIImagePickerControllerDelegate, UINavigationControllerDel
     let image = info[.originalImage] as? UIImage
     profilePic = image
     ProfileImageButton.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
-    ProfileImageButton.layer.borderColor = UIColor.systemPurple.cgColor
+    ProfileImageButton.layer.borderColor = UIColor.systemGreen.cgColor
     ProfileImageButton.layer.borderWidth = 3
-    ProfileImageButton.layer.cornerRadius = 10
+    ProfileImageButton.layer.cornerRadius = 140 / 2
     dismiss(animated: true)
   }
 }
